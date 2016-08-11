@@ -94,14 +94,26 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         Log.d(TAG, "Element " + position + " set.");
-
+        String title="...";
         // Get element from your dataset at this position and replace the contents of the view
         // with that element
         int post[] = {
-                R.drawable.album1, R.drawable.album2, R.drawable.album3,R.drawable.album4,R.drawable.album5
+                R.drawable.post1, R.drawable.post2, R.drawable.post3,R.drawable.album4,R.drawable.album5
         };
-        viewHolder.getTitle().setText("Post ke - "+position);
+        switch (position){
+            case 0:
+                title = "Pengumuman Sertifikasi IT UB";
+                break;
+            case 1:
+                title = "Open Reqruitment Panitia RAJA BRAWIJAYA 2016";
+                break;
+            case 2:
+                title = "Pendaftaran Beasiswa BII FINANCE";
+                break;
+        }
+        viewHolder.getTitle().setText(title);
         viewHolder.getImageView().setImageResource(post[position]);
+
     }
     // END_INCLUDE(recyclerViewOnBindViewHolder)
 

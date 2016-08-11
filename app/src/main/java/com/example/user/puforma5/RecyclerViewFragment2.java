@@ -39,7 +39,7 @@ public class RecyclerViewFragment2 extends Fragment {
     private static final String TAG = "RecyclerViewFragment";
     private static final String KEY_LAYOUT_MANAGER = "layoutManager";
     private static final int SPAN_COUNT = 2;
-    private static final int DATASET_COUNT = 5;
+    private static final int DATASET_COUNT = 2;
 
     private enum LayoutManagerType {
         GRID_LAYOUT_MANAGER,
@@ -71,11 +71,11 @@ public class RecyclerViewFragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.recycler_view_frag, container, false);
+        View rootView = inflater.inflate(R.layout.recycler_view_frag2, container, false);
         rootView.setTag(TAG);
 
         // BEGIN_INCLUDE(initializeRecyclerView)
-        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView2);
 
         // LinearLayoutManager is used here, this will layout the elements in a similar fashion
         // to the way ListView would layout elements. The RecyclerView.LayoutManager defines how
@@ -145,7 +145,7 @@ public class RecyclerViewFragment2 extends Fragment {
      */
     private void initDataset() {
         mDataset = new String[DATASET_COUNT];
-        for (int i = 0; i < DATASET_COUNT; i++) {
+        for (int i = 0; i < 3; i++) {
             mDataset[i] = "This is element #" + i;
         }
     }

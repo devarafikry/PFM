@@ -9,11 +9,17 @@
 
         android:orderInCategory="100"
         android:icon="@drawable/ic_search_white"
+        android:onClick="goSetting"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_search"
 
         android:orderInCategory="100"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_creator_white"
+        android:onClick="goCreator"
+        app:showAsAction="ifRoom" />
+
+
+
 </menu>
